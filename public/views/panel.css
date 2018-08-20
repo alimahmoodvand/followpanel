@@ -1,0 +1,57 @@
+.my-section{
+    margin-top: 10px;
+}
+.none-display{
+    display: none;
+    border:rgba(113,113,113,0.49) solid 1px;
+    /*width: 50%;*/
+    /*float: left;*/
+}
+body{
+    position: relative;
+}
+#report-image{
+    height: 100px;
+    width: 100px;
+}
+label{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(73, 80, 87);
+    text-align: center;
+    white-space: nowrap;
+}
+.action{
+    float: left;
+    width: 30%;
+    background-color: #b3b3b3;
+}
+.report-section{
+    float: left;
+    width: 70%;
+    background-color: #b3b3b3;
+}
+.report-container{
+    position: relative;
+}
+.report-detail{
+    margin: 5px;
+    /*border: solid 1px #626262;*/
+    /*background-color: aqua;*/
+}
+.report-tag{
+    border-bottom: solid 3px #626262;
+    margin: 3px;
+}
+.my-auth{
+    border-bottom: solid 3px #626262;
+    margin: 15px;
+}
+.my-rounded-circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    box-shadow: #222 0 0 16px;
+    vertical-align: middle;
+}

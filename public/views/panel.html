@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./views/panel.css?visdufhildf">
+    <script src="./views/panel.js"></script>
+</head>
+<body style="margin: 20px">
+<div class="my-section my-auth">
+    <div class="container">
+        <div class="row  no-gutters">
+            <button class="col-3 btn dropdown-toggle" type="button" id="buttonMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                accounts
+            </button>
+            <div id="accounts" class="dropdown-menu" aria-labelledby="buttonMenu1">
+            </div>
+            <div class="col-3">
+            <input type="text" class="form-control  mb-2" id="username" placeholder="Username">
+        </div>
+            <div class="col-3">
+                <input type="password" class="form-control  mb-2 form-control  mb-2" id="password" placeholder="Password">
+            </div>
+            <div class="col-3">
+                <button type="button" id="login" class="btn btn-primary mb-2">Add</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="container" style="max-width: 100% !important;">
+    <div class="row no-gutters">
+        <div id="panel" class="col-6 none-display">
+        <div class="input-group-prepend">
+            <span id="selected-username" class="input-group-text"></span>
+        </div>
+
+        <div class="my-section">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">account or page or location(with newline)</span>
+                </div>
+                <textarea id="sources" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="my-section">
+
+            <div class="switch">
+                <label>
+                    <input id="private" type="checkbox">private</label>
+            </div>
+        </div>
+
+        <div class="my-section">
+
+            <div class="switch">
+                <label>
+                    <input id="twicecomment" type="checkbox">twice comment</label>
+            </div>
+        </div>
+
+        <div class="my-section">
+            <label  class="bmd-label-static">unfollow by  ?</label>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" checked name="unfollow" id="unfollowno" value="no">
+                    NO
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="unfollow" id="unfollowsystem" value="system">
+                    by system following
+                </label>
+            </div>
+           <!-- <div class="radio">
+                <label>
+                    <input type="radio" name="unfollow" id="unfollowall" value="all">
+                    all following
+                </label>
+            </div>-->
+        </div>
+
+        <div class="my-section">
+            <label  class="bmd-label-static">unfollow delay (hours) ?</label>
+            <input type="number" class="form-control" id="hours" value="24" placeholder="hours">
+        </div>
+
+        <div class="my-section">
+            <label  class="bmd-label-static">limit of fetch ?</label>
+            <input type="number" class="form-control" id="limit" value="24" placeholder="limit">
+        </div>
+        <div class="my-section none-display">
+            <label  class="bmd-label-static">minimum Follower?</label>
+            <input type="number" class="form-control" id="minimumFollower" value="100" placeholder="minimum Follower">
+        </div>
+
+
+        <div class="my-section">
+            <label  class="bmd-label-static">comments ?</label>
+            <div id="comments">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">new comments (with newline)</span>
+                </div>
+                <textarea id="insert-comments" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <button id="add-comment" type="button" class="btn active"><code>add</code></button>
+        </div>
+
+        <div class="my-section">
+            <label  class="bmd-label-static">actions ?</label>
+            <div class="checkbox disabled">
+                <label>
+                    <input type="checkbox" name="actions" value="follow" checked disabled> follow
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="actions" value="comment">
+                    comment
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="actions" value="like">
+                    like
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <button id="save-setting" type="button"  class="btn active"><code>save</code></button>
+        </div>
+    </div>
+        <div  id="report" class="col-6 none-display">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+</body>
+</html>
